@@ -1,0 +1,333 @@
+/* ======== common ========== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  font-family: "Roboto", serif;
+  position: relative;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: 1px solid #05050518;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: #000;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+:root {
+  --box-shadow: 1px 1px 5px #919191;
+  --background-hover-btn: #ebeaea;
+}
+/* ========= header ========= */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f00;
+}
+
+/* .header .icon {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: 1px solid #05050518;
+} */
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__list {
+  list-style-type: none;
+  display: flex;
+}
+/* ====== danh sách cho btn Giới thiệu ======== */
+.header .navbar .list {
+  visibility: hidden;
+  height: 16.1rem;
+  background-color: #d3f7f8;
+  position: absolute;
+  top: 5.5rem;
+  right: 21.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.list__items {
+  border: 1px solid #b3b2b2;
+  padding: 1rem 0;
+  background-color: #e2e1e1;
+  border-radius: 3px;
+}
+
+.list__items:hover {
+  background-color: var(--background-hover-btn);
+  box-shadow: var(--box-shadow);
+}
+
+.header .navbar .list li:nth-child(2) a {
+  padding: 1rem 4.922rem;
+}
+
+.header .navbar .list li:nth-child(3) a {
+  padding: 1rem 0.9rem;
+}
+
+.header .navbar .list li:nth-child(4) a {
+  padding: 1rem 2.566rem;
+}
+
+.navbar__list li:nth-child(2):hover .list {
+  visibility: visible;
+}
+/* ================= end ================= */
+.navbar__bar {
+  width: 4rem;
+  visibility: hidden;
+}
+
+.navbar__list--items {
+  padding: 1.9rem;
+  transition: 2ms ease;
+}
+
+.navbar__list--items:hover {
+  background: #d80202;
+  transition: background 2ms ease;
+}
+
+.navbar__list--sign-in,
+.navbar__list--register {
+  margin: 0 0.5rem;
+  padding: 0.4rem;
+  background-color: aliceblue;
+  border: 1px solid #7c7979;
+  border-radius: 7px;
+}
+
+.navbar__list--register {
+  color: #fff;
+  background-color: #000;
+}
+
+.navbar__list--sign-in:hover {
+  text-shadow: 1px 1px 2px #d3f7f8;
+  background-color: #eeeded;
+}
+
+.navbar__list--register:hover {
+  text-shadow: 1px 1px 2px #ffffff80;
+  background-color: #1f1f1f;
+  transition: 2ms ease;
+}
+/* ========= body ========== */
+.body {
+  padding: 1rem 0;
+  background-color: #d6d6d650;
+}
+
+.body .introduce {
+  width: 80%;
+  margin: 0 auto;
+  text-indent: 2rem;
+  /* background: rgb(146, 231, 184); */
+}
+
+.body .uniform .img-uniform {
+  max-width: 30rem;
+  max-height: 25rem;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #00000088;
+}
+
+.card__title-img {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.body .main-content {
+  width: 80%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body .main-content .title {
+  line-height: 2rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .body .main-content .uniform > p {
+  text-align: center;
+} */
+
+.body .main-content .uniform .card {
+  margin: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
+
+.body .main-content .ao-dai .card,
+.body .main-content .ao-the-duc .card {
+  flex-direction: row-reverse;
+}
+
+.card__information h4 {
+  text-align: center;
+}
+/* ============== footer =============== */
+.footer {
+  height: 20rem;
+  background-color: #000000b0;
+}
+/* ========== dành cho thiết bị nhỏ hơn 1000px ======== */
+@media (max-width: 1000px) {
+  /* ========= header ============ */
+  .body .main-content {
+    width: 80%;
+  }
+
+  .navbar__bar {
+    width: 4rem;
+    margin-left: 12rem;
+    visibility: visible;
+  }
+
+  .header .navbar {
+    cursor: pointer;
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 1.1rem;
+    right: 0;
+  }
+
+  .header .navbar__list {
+    width: 18rem;
+    height: 24.5rem;
+    background-color: #d1cfcf;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .navbar__list--items {
+    border: 1px solid #8383838a;
+    border-radius: 3px;
+  }
+
+  .navbar__list--items,
+  .navbar__list--sign-in,
+  .navbar__list--register {
+    padding: 1.1rem 5rem;
+  }
+
+  .navbar__list--items:hover {
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-hover-btn);
+  }
+
+  .header .navbar li:nth-child(3) .navbar__list--items {
+    padding: 1.1rem 5.19rem;
+  }
+
+  .header .navbar li:nth-child(2) .navbar__list--items {
+    padding: 1.2rem 5.19rem;
+  }
+
+  .navbar__list--sign-in {
+    margin: 0;
+    padding: 1rem 6.2rem;
+  }
+
+  .navbar__list--register {
+    margin: 0;
+    padding: 1rem 5.6rem;
+  }
+
+  .header .navbar:hover {
+    visibility: visible;
+  }
+  /* ======== danh sách cho giới thiệu ========= */
+  .header .navbar .list {
+    visibility: hidden;
+    width: 18.7rem;
+    height: 16.4rem;
+    background-color: #d3f7f8;
+    position: absolute;
+    top: 10.5rem;
+    right: 17.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /* ========== end ============ */
+  /* ========= body ========= */
+  .body .main-content .uniform .card {
+    margin: 1rem 2rem;
+    display: inline-block;
+  }
+
+  .card__img {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__information {
+    margin-left: -1rem;
+  }
+
+  .ao-dai .card__information h4 {
+    margin-bottom: 0.1rem;
+  }
+}
