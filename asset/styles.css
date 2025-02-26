@@ -8,6 +8,8 @@ html {
 }
 
 body {
+  text-indent: 1rem;
+  text-align: justify;
   line-height: 1.8rem;
   font-size: 1.6rem;
   font-family: "Roboto", serif;
@@ -57,14 +59,6 @@ h6 {
   background-color: #f00;
 }
 
-/* .header .icon {
-  width: 5rem;
-  height: 5rem;
-  margin-left: 1rem;
-  border-radius: 50%;
-  border: 1px solid #05050518;
-} */
-
 .header .navbar {
   display: flex;
   align-items: center;
@@ -78,7 +72,6 @@ h6 {
 .header .navbar .list {
   visibility: hidden;
   height: 16.1rem;
-  background-color: #d3f7f8;
   position: absolute;
   top: 5.5rem;
   right: 21.3rem;
@@ -114,7 +107,7 @@ h6 {
 .navbar__list li:nth-child(2):hover .list {
   visibility: visible;
 }
-/* ================= end ================= */
+/* ================= danh sách cho btn Giới thiệu ================= */
 .navbar__bar {
   width: 4rem;
   visibility: hidden;
@@ -160,75 +153,128 @@ h6 {
   background-color: #d6d6d650;
 }
 
-.body .introduce {
-  width: 80%;
-  margin: 0 auto;
-  text-indent: 2rem;
-  /* background: rgb(146, 231, 184); */
-}
-
-.body .uniform .img-uniform {
-  max-width: 30rem;
-  max-height: 25rem;
-  border-radius: 3px;
-  box-shadow: 0 0 5px #00000088;
-}
-
-.card__title-img {
-  font-size: 1rem;
-  text-align: center;
-}
-
 .body .main-content {
-  width: 80%;
-  padding: 1rem 0;
+  max-width: calc(100% - 15rem);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.body .main-content .title {
-  line-height: 2rem;
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.body .main-content h3 {
+  margin: 1rem;
 }
 
-/* .body .main-content .uniform > p {
+.card-content__box {
+  margin-right: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.card-content__img-title {
+  font-size: 1.1rem;
   text-align: center;
-} */
+}
 
-.body .main-content .uniform .card {
-  margin: 1rem 2rem;
+.body .main-content h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.uniform-img {
+  max-width: 25rem;
+  max-height: 27rem;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #bebebee3;
+}
+
+.body .main-content .card-content {
+  margin: 1rem auto;
   display: flex;
   align-items: center;
 }
+/* ========= login ========= */
+.box-login {
+  background-color: #b9b9b9;
+}
 
-.card__information {
+.login {
+  width: calc(100% - 30%);
+  height: 35rem;
+  margin: 5rem auto;
+  border-radius: 3px;
+  background: url(../img/nui-phu-si.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  margin-left: 1rem;
 }
 
-.body .main-content .ao-dai .card,
-.body .main-content .ao-the-duc .card {
-  flex-direction: row-reverse;
+.login__block {
+  width: calc(100% - 30%);
+  height: 30rem;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 2s ease;
 }
 
-.card__information h4 {
-  text-align: center;
+.login__block:hover {
+  border: 1px solid #00000048;
+  backdrop-filter: blur(10px);
+  transition: 2s ease;
 }
+
+.login__block--items {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.login__block--items input {
+  width: 18rem;
+  height: 3rem;
+  background-color: #00000018;
+  outline: transparent;
+  border: 1px solid #ffffff3d;
+}
+
+.login__block--items input:active {
+  border: 1px solid #000000af;
+}
+
+.login__block--items:nth-last-child(2) {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.login__block--items:nth-last-child(2):hover {
+  border: 1px solid #00000059;
+}
+
+.login__block--items:nth-last-child(2):active {
+  border: 1px solid #000;
+  background-color: #0000002f;
+}
+
+.login__block--items:last-child:hover {
+  color: #d63737;
+  text-decoration: underline;
+}
+/* ========= login ========= */
 /* ============== footer =============== */
 .footer {
   height: 20rem;
   background-color: #000000b0;
 }
-/* ========== dành cho thiết bị nhỏ hơn 1000px ======== */
-@media (max-width: 1000px) {
-  /* ========= header ============ */
+/* ========== dành cho thiết bị nhỏ hơn 800px ======== */
+@media (max-width: 800px) {
   .body .main-content {
     width: 80%;
   }
@@ -267,7 +313,7 @@ h6 {
   .navbar__list--items,
   .navbar__list--sign-in,
   .navbar__list--register {
-    padding: 1.1rem 5rem;
+    padding: 1.1rem 4rem;
   }
 
   .navbar__list--items:hover {
@@ -276,16 +322,16 @@ h6 {
   }
 
   .header .navbar li:nth-child(3) .navbar__list--items {
-    padding: 1.1rem 5.19rem;
+    padding: 1.1rem 4.19rem;
   }
 
   .header .navbar li:nth-child(2) .navbar__list--items {
-    padding: 1.2rem 5.19rem;
+    padding: 1.2rem 4.19rem;
   }
 
   .navbar__list--sign-in {
     margin: 0;
-    padding: 1rem 6.2rem;
+    padding: 1rem 5.2rem;
   }
 
   .navbar__list--register {
@@ -296,12 +342,10 @@ h6 {
   .header .navbar:hover {
     visibility: visible;
   }
-  /* ======== danh sách cho giới thiệu ========= */
   .header .navbar .list {
-    visibility: hidden;
-    width: 18.7rem;
+    /* visibility: hidden; */
+    width: 19.7rem;
     height: 16.4rem;
-    background-color: #d3f7f8;
     position: absolute;
     top: 10.5rem;
     right: 17.7rem;
@@ -309,25 +353,33 @@ h6 {
     flex-direction: column;
     justify-content: space-around;
   }
-  /* ========== end ============ */
-  /* ========= body ========= */
-  .body .main-content .uniform .card {
-    margin: 1rem 2rem;
-    display: inline-block;
+
+  .body .main-content {
+    max-width: 100%;
   }
 
-  .card__img {
+  .body .main-content h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .body .main-content h3 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .body .main-content .card-content {
+    display: block;
+  }
+
+  .card-content__box {
+    display: block;
+  }
+
+  .card-content__box .uniform-img {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card__information {
-    margin-left: -1rem;
-  }
-
-  .ao-dai .card__information h4 {
-    margin-bottom: 0.1rem;
+    display: block;
   }
 }
