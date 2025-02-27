@@ -49,7 +49,8 @@ h6 {
 }
 /* ========= header ========= */
 .header {
-  position: sticky;
+  z-index: 3;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -70,6 +71,7 @@ h6 {
 }
 /* ====== danh sách cho btn Giới thiệu ======== */
 .header .navbar .list {
+  z-index: 4;
   visibility: hidden;
   height: 16.1rem;
   position: absolute;
@@ -148,6 +150,32 @@ h6 {
   transition: 2ms ease;
 }
 /* ========= body ========== */
+
+.home-page .body {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  z-index: 2;
+  position: absolute;
+  top: 66rem;
+  left: 0;
+  right: 0;
+}
+
+.background-box {
+  /* opacity: 50%; */
+  z-index: 1;
+  width: calc(100% - 0.01rem);
+  height: 67rem;
+  background: url(../img/IMG_4496.jpeg) no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0rem;
+}
+
+.header .home-page {
+  background-color: transparent;
+}
+
 .body {
   padding: 1rem 0;
   background-color: #d6d6d650;
@@ -155,7 +183,7 @@ h6 {
 
 .body .main-content {
   max-width: calc(100% - 15rem);
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .body .main-content h3 {
@@ -177,7 +205,7 @@ h6 {
   font-size: 3rem;
   line-height: 3rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 5rem auto 1rem auto;
 }
 
 .uniform-img {
@@ -200,7 +228,7 @@ h6 {
 .login {
   width: calc(100% - 30%);
   height: 35rem;
-  margin: 5rem auto;
+  margin: 17rem auto;
   border-radius: 3px;
   background: url(../img/nui-phu-si.jpeg) no-repeat;
   background-size: cover;
@@ -343,7 +371,7 @@ h6 {
     visibility: visible;
   }
   .header .navbar .list {
-    /* visibility: hidden; */
+    visibility: hidden;
     width: 19.7rem;
     height: 16.4rem;
     position: absolute;
@@ -381,5 +409,9 @@ h6 {
   .card-content__box .uniform-img {
     margin: 0 auto;
     display: block;
+  }
+
+  .login__block {
+    width: 20rem;
   }
 }
