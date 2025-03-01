@@ -10,7 +10,7 @@ html {
 body {
   text-indent: 1rem;
   text-align: justify;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
   font-size: 1.6rem;
   font-family: "Roboto", serif;
   position: relative;
@@ -80,7 +80,7 @@ h6 {
 
 .header .navbar .list {
   visibility: hidden;
-  height: 16.1rem;
+  height: 20rem;
   position: absolute;
   top: 5.4rem;
   right: 23.3rem;
@@ -114,6 +114,10 @@ h6 {
 
 .header .navbar .list span:nth-child(4) a {
   padding: 1rem 3.566rem;
+}
+
+.header .navbar .list span:nth-child(5) a {
+  padding: 1rem 7.25rem;
 }
 
 .navbar__list #list-nav-introduce:hover .list {
@@ -161,7 +165,22 @@ h6 {
 }
 /* ========= body ========== */
 #body {
-  background-color: #ffffffb0 !important;
+  background-color: #ffffff !important;
+}
+
+#body .img-home {
+  border-radius: 3px;
+  margin: 1rem 2rem;
+  width: 90%;
+}
+
+#body .video-home {
+  background: #000;
+  display: flex;
+  width: 70rem;
+  height: 40rem;
+  border-radius: 3px;
+  margin: 0 auto;
 }
 
 .home-page .body {
@@ -175,6 +194,7 @@ h6 {
 }
 
 .background-box {
+  opacity: 95%;
   z-index: 1;
   width: calc(100% - 0.01rem);
   height: 67rem;
@@ -182,6 +202,21 @@ h6 {
   background-size: cover;
   position: fixed;
   top: 0rem;
+}
+
+.background-box::after {
+  content: "ĐỒNG PHỤC TRƯỜNG THPT XUÂN LỘC";
+  font-weight: 900;
+  font-size: 6rem;
+  text-shadow: 12px 9px 16px #000;
+  position: absolute;
+  top: 160px;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+  line-height: 7rem;
+  color: #ffffff;
 }
 
 .header .home-page {
@@ -217,7 +252,7 @@ h6 {
   font-size: 3rem;
   line-height: 3rem;
   text-align: center;
-  margin: 5rem auto 1rem auto;
+  margin: 1rem auto 1rem auto;
 }
 
 .uniform-img {
@@ -276,9 +311,7 @@ h6 {
 }
 
 .member__supports .fa-solid {
-  margin: 1rem 0.5rem;
-  padding: 0.5rem;
-  border-radius: 1rem;
+  padding: 0.3rem;
 }
 
 .member__supports .fa-solid:hover {
@@ -287,14 +320,11 @@ h6 {
   transition: all 1s ease;
 }
 /* ========= login ========= */
-.box-login {
-  background-color: #b9b9b9;
-}
 
 .login {
   width: calc(100% - 30%);
   height: 35rem;
-  margin: 17rem auto;
+  margin: 9rem auto;
   border-radius: 3px;
   background: url(../img/nui-phu-si.jpeg) no-repeat;
   background-size: cover;
@@ -348,7 +378,14 @@ h6 {
   background: transparent;
 }
 
-.login__block--items:nth-last-child(2):hover {
+.login__block--items.register {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.login__block--items#login:hover,
+.login__block--items.register:hover {
   border: 1px solid #00000059;
 }
 
@@ -357,7 +394,7 @@ h6 {
   background-color: #0000002f;
 }
 
-.login__block--items:last-child:hover {
+.login__block--items:not(.login__block--items.register):last-child:hover {
   color: #d63737;
   text-decoration: underline;
 }
@@ -428,7 +465,6 @@ h6 {
     border-bottom: 2px solid #000000;
     border-radius: 3px;
   }
-
   .navbar__list--items,
   .navbar__list--sign-in,
   .navbar__list--register {
